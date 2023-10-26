@@ -1,0 +1,52 @@
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">        
+        <title>Weather Data</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-beta/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.4.1/css/mdb.min.css">
+    </head>
+  
+    <body translate="no" class="hm-gradient">
+    
+      
+      <main>
+          
+          <!--MDB Tables-->
+          <div class="container mt-4">
+              <div class="card mb-4">
+                  <div class="card-body">
+                      <!--Table-->
+                      <table class="table table-hover">
+                          <!--Table head-->
+                          <thead class="mdb-color darken-3 text-white">
+                            <th>#ID</th>
+                            <th>Temperature</th>
+                            <th>Humidity</th>
+                            <th>Date</th>
+                          </thead>
+                          <!--Table head-->
+                          <!--Table body-->
+                          <tbody>
+                            <tr th:each="data : ${weatherDataList}">
+                                <td th:text="${data.id}"></td>
+                                <td th:text="${data.temperature}"></td>
+                                <td th:text="${data.humidity}"></td>
+                                <td th:text="${data.timestamp}"></td>
+                          </tbody>
+                          <!--Table body-->
+                      </table>
+                      <!--Table-->
+                  </div>
+              </div>
+  
+          </div>
+          <!--MDB Tables-->
+        
+      </main>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.4.1/js/mdb.min.js"></script>
+    </body>
+  </html>

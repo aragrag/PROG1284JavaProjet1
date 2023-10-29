@@ -28,7 +28,7 @@ public class HTTPController {
 			// Enregistrer les données dans la base de données
 			weatherDataRepository.save(weatherData);
 		
-			return "Message Published and Data Saved Successfully";
+			return "Message Published and Data Saved Successfully !";
 		}
 		@GetMapping("/test")
 		public String sendTest(@RequestBody WeatherPayload payload) throws AWSIotException, JsonProcessingException {
